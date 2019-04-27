@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "homepage";
+}
+
+<h2>homepage</h2>
+@*1.YOL*@
+
+@*<div>
+   @Html.Partial("_CategoriesPartialPage")  dersek bu iş çözülür PartialView i direkt kullanabiliriz bu 1.yol (asıl anlatacağımız yol bu değil bunu daha önce gösterdik hatırlatma bu sadece )
+</div>*@
+
+@*2.YOL*@
+
+@Html.Action("GetCategoriesPartial") @* Dikkat PartialView ınız Controlleriniz tekse bu kadar yazmanız yeter ama baska Controller da tutuluyorsa eğer PartialView ozaman 
+                                           parametre olarak , atıp o Controller ın adını yazmalısınız yoksa sadece sayfanın bağlı oldugu Controller da arama yapar ve
+                                            public PartialViewResult GetCategoriesPartial()  ınızı bulamaz şuan sayfanın Controller 'ı ile PartialView aynı Controller da 
+                                           oldugundan herhangi bir sorun yasanmaz.*@
+@*NOT: 1.yolda PartialView adı 2.yolda public PartialViewResult adının kullanıldıgına dikkat ediniz!!!*@
+
+
+@*3.YOL*@
+<br /><hr /><br />
+
+@Html.Action("GetCategoriesPartial_2")

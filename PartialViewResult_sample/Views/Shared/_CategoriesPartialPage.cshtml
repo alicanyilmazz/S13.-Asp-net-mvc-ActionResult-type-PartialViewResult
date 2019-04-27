@@ -1,0 +1,26 @@
+﻿@{ 
+
+    List<string> categories = new List<string>()
+    {
+        "technology",
+        "Warfare",
+        "Auto",
+        "Food",
+        "Cleaning",
+        "Plane"
+    };
+
+}
+
+<ul class="list-group">
+
+    @foreach (string item in categories)
+    {
+        <li class="list-group-item">
+            <a href="/Home/Category?adi=@item">@item</a>
+        </li>
+    }
+
+
+
+</ul>
